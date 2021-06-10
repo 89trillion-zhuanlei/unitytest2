@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 public class StartPanelController : MonoBehaviour
 {
-    public GameObject StartPanel;
-    public GameObject GamePanel;
+    [SerializeField]private GameObject startPanel;
+    [SerializeField]private GameObject gamePanel;
+    /// <summary>
+    /// 点击开始界面开始按钮
+    /// </summary>
     public void ClickStartButton()
     {
-        GamePanel.SetActive(true);
-        StartPanel.SetActive(false);
+        gamePanel.SetActive(true);
+        startPanel.SetActive(false);
     }
 }
